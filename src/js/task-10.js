@@ -14,7 +14,7 @@ let curNum = 0;
 const createBoxes = amount => {
 
   let elementsDiv = [];
-  
+  console.log("hi")
   for (let index = 0; index < amount; index++) {
     const divEl = document.createElement('div');
     divEl.style.width = `${30 + 10 * index}px`;
@@ -24,12 +24,16 @@ const createBoxes = amount => {
       
   }
 
-  divBoxes.append(...elementsDiv)
+  divBoxes.append(...elementsDiv);
   return elementsDiv;
   
 };
 
-inputEl.addEventListener('input', event => { curNum = event.currentTarget.value });
+const getValue = event => {
+  curNum = event.currentTarget.value; 
+}
+
+inputEl.addEventListener('input', getValue);
 
 buttonCreate.addEventListener("click", () => createBoxes(curNum));
 
