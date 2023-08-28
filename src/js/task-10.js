@@ -30,6 +30,7 @@ const createBoxes = amount => {
 };
 
 
+let valueInput;
 
 inputEl.addEventListener('input', event => valueInput = event.currentTarget.value);
 
