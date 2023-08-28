@@ -1,2 +1,0 @@
-!function(){var e=document.querySelector("#counter");console.log(e);var o=e.firstElementChild;console.log(o);var n=e.lastElementChild;console.log(n);var t=document.querySelector("#value");console.log(t);var l=0;o.addEventListener("click",(function(e){l-=1,t.textContent=l,console.log(l)})),n.addEventListener("click",(function(e){l+=1,t.textContent=l,console.log(l)}))}();
-//# sourceMappingURL=task-04.d3095878.js.map
