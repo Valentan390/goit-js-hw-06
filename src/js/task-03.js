@@ -15,15 +15,20 @@ const images = [
 
 const galleryListEl = document.querySelector('.gallery');
 
-const makeGalleryCard = images.map((imag => {
+galleryListEl.style.display = 'flex';
+galleryListEl.style.gap = '30px';
+galleryListEl.style.flexDirection = 'column-reverse';
+galleryListEl.style.alignItems = 'center';
+galleryListEl.style.listStyle = 'none';
+
+const makeGalleryCard = images.map(imag => {
   const { url, alt } = imag;
   return `
             <li class="gallery-item">
-                <img src="${url}" alt="${alt}" width='400px'>
+                <img src="${url}" alt="${alt}" width='800'>
             </li>
   `;
 
-}))
+});
 
-console.log(makeGalleryCard.join(''));
 galleryListEl.insertAdjacentHTML('beforeend', makeGalleryCard.join(''));

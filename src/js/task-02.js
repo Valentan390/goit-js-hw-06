@@ -9,12 +9,14 @@ const ingredients = [
 
 const galleryListEl = document.querySelector('#ingredients');
 
-const galleryItemEl = ingredients.map((ingredient => {
-  const ItemEl = document.createElement('li');
-  ItemEl.classList.add('item');
-  ItemEl.textContent = ingredient;
-  return ItemEl;
-}))
+const itemАrray = [];
 
-console.log(galleryItemEl);
-galleryListEl.append(...galleryItemEl);
+ingredients.forEach(ingredient => {
+  const itemEl = document.createElement('li');
+  itemEl.classList.add('item');
+  itemEl.textContent = ingredient;
+  itemАrray.push(itemEl);
+
+});
+
+galleryListEl.append(...itemАrray);
