@@ -9,7 +9,7 @@ const inputEl = divControls.firstElementChild;
 const buttonCreate = document.querySelector('[data-creaet]');
 const buttonDestroy = document.querySelector('[data-destroy]');
 const divBoxes = document.querySelector('#boxes');
-
+let curNum = 0;
 
 const createBoxes = amount => {
 
@@ -29,12 +29,9 @@ const createBoxes = amount => {
   
 };
 
+inputEl.addEventListener('input', event => { curNum = event.currentTarget.value });
 
-let valueInput;
-
-inputEl.addEventListener('input', event => valueInput = event.currentTarget.value);
-
-buttonCreate.addEventListener("click", () => createBoxes(valueInput));
+buttonCreate.addEventListener("click", () => createBoxes(curNum));
 
 
 const destroyBoxes = () => {
