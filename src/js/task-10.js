@@ -30,9 +30,10 @@ const createBoxes = amount => {
 };
 
 
-inputEl.addEventListener('input', event => value = event.currentTarget.value);
 
-buttonCreate.addEventListener("click", () => createBoxes(value));
+inputEl.addEventListener('input', event => valueInput = event.currentTarget.value);
+
+buttonCreate.addEventListener("click", () => createBoxes(valueInput));
 
 
 const destroyBoxes = () => {
